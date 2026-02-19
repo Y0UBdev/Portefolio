@@ -114,10 +114,15 @@ const FlipCard = ({ title, symbol, subtitle, navigateTo, children, index = 0 }: 
                         </svg>
 
                         {/* Center content */}
-                        <div className="relative z-10 flex flex-col items-center gap-3">
-                            <div className="text-3xl animate-mystic-pulse text-primary/80">{symbol}</div>
-                            <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
-                            <span className="font-display text-xs tracking-[0.3em] uppercase text-primary/50">{title}</span>
+                        <div className="absolute top-[43%] flex items-center justify-center z-10">
+                            <div className="relative flex flex-col items-center">
+                                <div className="text-4xl animate-mystic-pulse text-primary/80">
+                                    {symbol}
+                                </div>
+                                <span className="mt-11 font-display text-xs tracking-[0.35em] uppercase text-primary/50">
+                                    {title}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
