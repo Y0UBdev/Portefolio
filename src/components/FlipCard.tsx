@@ -1,18 +1,27 @@
 import * as React from "react";
-import {ReactNode, useState} from "react";
+import {useState} from "react";
 import {motion} from "framer-motion";
 import {useNavigate} from "react-router-dom";
+import Tag from "@/components/ui/tag.tsx";
+
+interface CardLink {
+    label: string;
+    url: string;
+}
 
 interface FlipCardProps {
     title: string;
     symbol: string;
     subtitle?: string;
+    image?: string;
+    links?: CardLink[];
+    tags?: string[];
     navigateTo?: string;
-    children?: ReactNode;
+    children?: React.ReactNode;
     index?: number;
 }
 
-const FlipCard = ({ title, symbol, subtitle, navigateTo, children, index = 0 }: FlipCardProps) => {
+const FlipCard = ({ title, symbol, subtitle, image, links, tags, navigateTo, children, index = 0 }: FlipCardProps) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const navigate = useNavigate();
 
@@ -128,24 +137,64 @@ const FlipCard = ({ title, symbol, subtitle, navigateTo, children, index = 0 }: 
                 </div>
 
                 {/* Front of card */}
-                <div onClick={handleReset} className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl card-ornament-border overflow-hidden">
-                    <div className="w-full h-full bg-card p-5 flex flex-col">
-                        <div className="flex items-center justify-between mb-3">
-                            <h3 className="font-display text-lg text-primary">{title}</h3>
-                        </div>
-                        {subtitle && (
-                            <p className="text-xs text-muted-foreground mb-3 font-body">{subtitle}</p>
-                        )}
-                        <div className="flex-1 scrollbar overflow-x-hidden text-sm font-body text-secondary-foreground leading-relaxed">
-                            {children}
-                        </div>
-                        {navigateTo && (
-                            <div className="mt-3 pt-3 border-t border-border/30 text-center">
-                                <span onClick={handleExplore} className="text-xs text-primary/80 font-body tracking-wider uppercase animate-mystic-pulse overflow">
-                                    Explorer →
-                                </span>
+                <div onClick={handleReset} className="absolute inset-0 backface-hidden rotate-y-180 rounded card-ornament-border overflow-hidden">
+                    <div className="w-full h-full bg-card flex flex-col">
+                        {image && (
+                            <div className="w-full h-[130px] overflow-hidden border-b border-border/20">
+                                <img
+                                    src={image}
+                                    alt={title}
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                         )}
+
+                        <div className={`flex-1 flex overflow-x-hidden flex-col ${image ? 'p-3' : 'p-5'}`}>
+                            <div className="text-center mb-2 pb-1.5 border-b border-border/20">
+                                <h3 className="font-display text-lg text-primary">{title}</h3>
+                            </div>
+                            {subtitle && (
+                                <p className="text-xs text-muted-foreground mb-2 font-body">{subtitle}</p>
+                            )}
+                            <div className="flex-1 scrollbar pr-2 overflow-x-hidden text-sm font-body text-secondary-foreground leading-relaxed">
+                                {children}
+                            </div>
+
+                            {/* Links */}
+                            {links && links.length > 0 && (
+                                <div className="mt-2 pt-2 border-t border-border/20 flex flex-wrap gap-2">
+                                    {links.map((link) => (
+                                        <a
+                                            key={link.url}
+                                            href={link.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={(e) => e.stopPropagation()}
+                                            className="text-[10px] px-2 py-0.5 border border-primary/30 text-primary/70 font-body tracking-wider uppercase hover:bg-primary/10 hover:text-primary transition-colors"
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
+
+                            {/* Tags */}
+                            {tags && tags.length > 0 && (
+                                <div className="mt-2 pt-2 border-t border-border/20 flex flex-wrap gap-2">
+                                    {tags.map((tag) => (
+                                        <Tag tag={tag}></Tag>
+                                    ))}
+                                </div>
+                            )}
+
+                            {navigateTo && (
+                                <div className="mt-3 pt-3 border-t border-border/30 text-center">
+                                    <span onClick={handleExplore} className="text-xs text-primary/80 font-body tracking-wider uppercase animate-mystic-pulse overflow">
+                                        Explorer →
+                                    </span>
+                                </div>
+                            )}
+                        </div>
                     </div>
                 </div>
             </motion.div>

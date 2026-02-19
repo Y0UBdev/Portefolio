@@ -99,9 +99,18 @@
                 0 0 10px hsla(0, 0%, 75%, 0.22);
   }
 
-  .scrollbar::-webkit-scrollbar {
-      display: none;
-  }
+    .scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(230, 176, 51, 0.6);
+        border-radius: 4px;
+    }
 
 
   .glow-gold-strong {

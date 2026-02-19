@@ -13,3 +13,4 @@ const Tag = ({tag}: IProps) => {
 }
 
 export default Tag;
+
