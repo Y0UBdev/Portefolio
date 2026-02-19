@@ -14,15 +14,16 @@ export const homeCards = {
     },
 
     Projects: {
-        title: "Projets",
+        title: "Expériences",
         description:"Découvrez mes réalisations : applications web, expériences interactives et créations innovantes.",
         symbol: "⬡",
         navigateTo: "/projects",
         preview: [
-            "App E-commerce",
-            "Dashboard Analytics",
-            "Portfolio Créatif",
-            "API Platform"
+            "Pathfinding Algorithm",
+            "Roblox Game developer",
+            "Conway's Game of Life",
+            "Web Scraper",
+            "..."
         ]
     },
 
@@ -30,10 +31,14 @@ export const homeCards = {
         title: "Compétences",
         symbol: "✦",
         categories: [
-            { label: "Frontend", skills: "React, Vue, TypeScript" },
-            { label: "Backend", skills: "Node.js, Python, Go" },
-            { label: "Design", skills: "Figma, UI/UX, Motion" },
-            { label: "DevOps", skills: "Docker, AWS, CI/CD" },
+            { label: "Frontend", skills: "Html/Css, React, TypeScript, Tailwindcss" },
+            { label: "Backend", skills: "Laravel, Flask, C#" },
+            { label: "Game Dev", skills: "Roblox Studio, Lua" },
+            { label: "Design & UX", skills: "Figma" },
+            { label: "DevOps & Infrastructure", skills: "Docker, CI/CD, Portainer" },
+            { label: "Build & Tooling", skills: "Gradle, Maven, Vite, npm, node" },
+            { label: "Languages", skills: "Javascript, Python, Java, Php" },
+            { label: "Versioning & Collaboration", skills: "Git, Github, Gitlab, Jira, Linear, Notion, Trello" },
         ]
     },
 
