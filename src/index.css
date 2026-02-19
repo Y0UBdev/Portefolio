@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Raleway:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 7%;
+    --foreground: 40 20% 90%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 230 20% 10%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 42 78% 55%;
+    --primary-foreground: 230 25% 7%;
+
+    --secondary: 230 15% 18%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 230 15% 15%;
+    --muted-foreground: 230 10% 50%;
+
+    --accent: 270 40% 45%;
+    --accent-foreground: 40 20% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 42 30% 25%;
+    --input: 230 15% 18%;
+    --ring: 42 78% 55%;
+
+    --radius: 0.5rem;
+
+    --gold-glow: 42 78% 55%;
+    --mystic-purple: 270 40% 45%;
+    --deep-navy: 230 25% 7%;
+    --card-back: 230 20% 10%;
+    --card-ornament: 42 60% 40%;
+
+    --sidebar-background: 230 25% 7%;
+    --sidebar-foreground: 40 20% 90%;
+    --sidebar-primary: 42 78% 55%;
+    --sidebar-primary-foreground: 230 25% 7%;
+    --sidebar-accent: 270 40% 45%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 42 30% 25%;
+    --sidebar-ring: 42 78% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-body {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .text-gold-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(42, 78%, 55%) 0%,
+      hsl(38, 90%, 65%) 50%,
+      hsl(42, 78%, 55%) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 5px hsl(42 78% 55% / 0.3),
+                0 0 10px hsl(42 78% 55% / 0.1);
+  }
+
+  .glow-black {
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.44),
+                0 0 10px hsla(0, 0%, 75%, 0.22);
+  }
+
+  .scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+
+
+  .glow-gold-strong {
+    box-shadow: 0 0 20px hsl(42 78% 55% / 0.4),
+                0 0 60px hsl(42 78% 55% / 0.15),
+                0 0 100px hsl(42 78% 55% / 0.05);
+  }
+
+  .glow-purple {
+    box-shadow: 0 0 20px hsl(270 40% 45% / 0.3),
+                0 0 60px hsl(270 40% 45% / 0.1);
+  }
+
+  .card-ornament-border {
+    border: 1px solid hsl(42 60% 40% / 0.4);
+    background: linear-gradient(
+      145deg,
+      hsl(230, 20%, 10%) 0%,
+      hsl(230, 25%, 8%) 100%
+    );
+  }
+
+  .card-back-pattern {
+    background:
+      radial-gradient(circle at 50% 50%, hsl(270 40% 45% / 0.08) 0%, transparent 70%),
+      linear-gradient(145deg, hsl(230 20% 12%) 0%, hsl(230 25% 8%) 100%);
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
