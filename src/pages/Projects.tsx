@@ -44,7 +44,7 @@ const Projects = () => {
                                 {project.description}
                             </p>
                             <div className="flex flex-wrap gap-1.5">
-                                {project.tech.map((t) => (
+                                {project.tag.map((t) => (
                                     <Tag tag={t}></Tag>
                                 ))}
                             </div>
