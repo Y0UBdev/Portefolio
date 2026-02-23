@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
+import MysticCursor from "./components/MysticCursor";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,7 @@ const App = () => (
         <TooltipProvider>
             <Toaster />
             <Sonner />
+            <MysticCursor />
             <HashRouter>
                 <Routes>
                     <Route path="/" element={<Index />} />
