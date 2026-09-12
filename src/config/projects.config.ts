@@ -56,7 +56,7 @@ export const projects = [
         symbol: "⁕",
         description: "Projet d'étude de Développement Mobile. Application mobile Android (React Native / Expo) permettant de garder un historique des parties de jeux de société : ajout de parties et de jeux, consultation et filtrage de l'historique, et statistiques par jeu.",
         tag: ["React Native", "Tailwindcss", "TypeScript", "Expo Go", "Clean Code Architecture", "Gitlab", "Android"],
-        image: "cfel.webp",
+        image: "expo_go.png",
         links: [
             { label: "Github", url: "https://github.com/Y0UBdev/Boardlog-mobile" },
         ],
