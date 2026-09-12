@@ -61,4 +61,14 @@ export const projects = [
             { label: "Github", url: "https://github.com/Y0UBdev/Boardlog-mobile" },
         ],
     },
+    {
+        title: "Projet de Cryptographie",
+        symbol: "⁜",
+        description: "Projet d'étude de Mathématique. Ce projet implémente trois algorithmes (ChaCha20, Poly1305 et AEAD) qui, utilisés ensemble, résolvent La confidentialité et L'intégrité des données.",
+        tag: ["Math", "Java", "Algorithme", "Clean Code/SOLID", "Cryptographie"],
+        image: "crypto.webp",
+        links: [
+            { label: "Github", url: "https://github.com/Y0UBdev/B2MATH-2526S1" },
+        ],
+    },
 ];
