@@ -18,7 +18,6 @@ export const projects = [
         image: "GALogoBackground.png",
         links: [
             { label: "Discord", url: "https://discord.gg/KjaA2eE4BP" },
-            { label: "Roblox community", url: "#" },
         ],
     },
     {
@@ -50,6 +49,16 @@ export const projects = [
         image: "cfel.webp",
         links: [
             { label: "Salto", url: "https://salto.helmo.be/" },
+        ],
+    },
+    {
+        title: "Boardlog Mobile",
+        symbol: "⁕",
+        description: "Projet d'étude de Développement Mobile. Application mobile Android (React Native / Expo) permettant de garder un historique des parties de jeux de société : ajout de parties et de jeux, consultation et filtrage de l'historique, et statistiques par jeu.",
+        tag: ["React Native", "Tailwindcss", "TypeScript", "Expo Go", "Clean Code Architecture", "Gitlab", "Android"],
+        image: "cfel.webp",
+        links: [
+            { label: "Github", url: "https://github.com/Y0UBdev/Boardlog-mobile" },
         ],
     },
 ];
