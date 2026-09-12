@@ -62,7 +62,7 @@ export const projects = [
         ],
     },
     {
-        title: "Projet de Cryptographie",
+        title: "Cryptographie",
         symbol: "⁜",
         description: "Projet d'étude de Mathématique. Ce projet implémente trois algorithmes (ChaCha20, Poly1305 et AEAD) qui, utilisés ensemble, résolvent La confidentialité et L'intégrité des données.",
         tag: ["Math", "Java", "Algorithme", "Clean Code/SOLID", "Cryptographie"],
