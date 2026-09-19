@@ -22,7 +22,7 @@ interface FlipCardProps {
 }
 
 const FlipCard = ({ title, symbol, subtitle, image, links, tags, navigateTo, children, index = 0 }: FlipCardProps) => {
-    const [isFlipped, setIsFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(true);
     const navigate = useNavigate();
 
     const handleClick = () => {
