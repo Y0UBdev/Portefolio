@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import MysticCursor from "./components/MysticCursor";
+import CVButton from "./components/CVButton";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
             <Toaster />
             <Sonner />
             <MysticCursor />
+            <CVButton />
             <HashRouter>
                 <Routes>
                     <Route path="/" element={<Index />} />
